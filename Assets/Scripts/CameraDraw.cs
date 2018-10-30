@@ -107,7 +107,7 @@ public class CameraDraw : MonoBehaviour {
         }
     }
 
-    public bool PaintRay(Vector3 testRay)
+    public bool PaintRay(Vector3 testRay , int radius)
     {
 
         RaycastHit hit;
@@ -140,7 +140,7 @@ public class CameraDraw : MonoBehaviour {
         {
             //ammu Osuu seinään
             //huom radius = kovakoodattu jos teet useampia aseita muokkaa radius parametrien mukaan
-            Circle(tex, (int)pixelUV.x, (int)pixelUV.y, 10, Color.clear);
+            Circle(tex, (int)pixelUV.x, (int)pixelUV.y, radius, Color.clear);
             tex.Apply();
             return true;
 

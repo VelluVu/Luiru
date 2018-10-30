@@ -47,7 +47,7 @@ public class GrapplingHook : MonoBehaviour {
                 hookConnection.frequency = 0.8f;
 
             }
-            hookConnection.distance -= Input.GetAxis("Vertical") * 0.5f;
+            hookConnection.distance -= Input.GetAxis("Vertical") * 1 * Time.deltaTime;
         }
         else
         {

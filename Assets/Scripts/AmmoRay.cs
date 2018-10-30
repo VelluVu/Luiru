@@ -6,6 +6,7 @@ public class AmmoRay : MonoBehaviour {
 
     private bool hitToWall;
     public Camera cam;
+    public int ammoRad;
 
 	void Start () {
 
@@ -16,7 +17,7 @@ public class AmmoRay : MonoBehaviour {
 	
 	void Update () {
 
-        hitToWall = cam.GetComponent<CameraDraw>().PaintRay(transform.position);
+        hitToWall = cam.GetComponent<CameraDraw>().PaintRay(transform.position, ammoRad);
 
         if (hitToWall)
         {
